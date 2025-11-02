@@ -1,0 +1,11 @@
+# Ignora la cartella di configurazione di VS Code
+.vscode/
+
+# Ignora la cartella "prove"
+prove/
+
+# Ignora il file HTML secondario
+index-prenota.html
+
+# Ignora il documento Word
+REQUISITI_SITO.docx
