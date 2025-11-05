@@ -891,45 +891,37 @@ h1{
     border: 2px solid var(--colore3); 
 }
 
-/*----------------------------------------------------------------MEDIAQUERY*/
-
-/*--------------- MEDIA QUERY PER "DOVE SIAMO" ---------------*/
-@media (max-width: 768px) {
-  .dove-siamo-container {
-    flex-direction: column; 
-  }
-
-  .lista-contatti {
-    display: inline-block; 
-    text-align: left; 
-  }
-
-  .info-colonna {
-    padding-right: 0; 
-    text-align: center; 
-  }
-
-  .info-colonna h1,
-  .info-colonna .indirizzo,
-  .info-colonna h3,
-  .lista-orari {
-    text-align: center; 
-  }
-
-  .lista-orari {
-    display: inline-block; 
-    text-align: left; 
-  }
-
-  .mappa-colonna {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .mappa-colonna iframe {
-    height: 300px;
-  }
+/* Stili specifici per schermi con larghezza massima di 480px */
+/* ✨ Contenitore delle colonne: fa in modo che le colonne si impilino verticalmente */
+.tabella-orari {
+  flex-direction: column; 
+  align-items: center; /* Centra le colonne all'interno di tabella-orari */
 }
+
+    /* ✨ Stili delle singole colonne: per schermi piccoli occupano la quasi totalità della larghezza */
+.colonna {
+  width: 90%; /* Occupa quasi tutta la larghezza dello schermo mobile */
+  margin-bottom: 20px; /* Aggiunge spazio sotto ogni colonna per separarle */
+  padding: 15px 0; /* Aggiunge un po' di padding interno */
+}
+
+    /* ✨ Intestazioni delle colonne: riduciamo la dimensione per adattarla meglio */
+.colonna h3 {
+  font-size: 20px;
+}
+
+    /* ✨ Testo orari: miglioriamo la leggibilità */
+.colonna li {
+  font-size: 1.1rem;
+}
+    
+    /* ✨ Titolo principale: riduciamo la dimensione e il margine per maggiore compattezza */
+.orari-lezioni h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/*----------------------------------------------------------------MEDIAQUERY*/
 
 /*--------------- MEDIA QUERY PER IL FOOTER  ---------------*/
 @media (max-width: 1080px) {
@@ -1226,4 +1218,69 @@ h1{
   grid-row: auto;
   grid-column: auto;
 }
+  .dove-siamo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center; /* centra tutto il testo */
+  }
+
+  .info-colonna {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center; /* centra i titoli e paragrafi */
+  }
+
+  /* assicura che anche i titoli siano centrati */
+  .info-colonna h1,
+  .info-colonna h3,
+  .info-colonna p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lista-contatti,
+  .lista-orari {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .info-colonna h3{
+    margin-top: 40px;
+  }
+
+  .lista-contatti li,
+  .lista-orari li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .spazio-indirizzo{
+  text-align: center;  
+  justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
+.indirizzo{
+  margin: auto;
+}
+
+  .footer-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+  }
+}
+
+
