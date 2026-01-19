@@ -530,12 +530,16 @@ h1{
 
 .tabella-orari {
   display: flex;
+  box-sizing: border-box;
   justify-content: center;
+  width: 100%;
 }
 
 .colonna {
   border-radius: 12px;
-  width: 23%;
+  width: 20%;
+  margin: 8px;
+  
 }
 
 .colonna h3 {
@@ -546,6 +550,8 @@ h1{
 .colonna ul {
   list-style: none;
   padding: 0;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .colonna li {
@@ -891,35 +897,7 @@ h1{
     border: 2px solid var(--colore3); 
 }
 
-/* Stili specifici per schermi con larghezza massima di 480px */
-/* ✨ Contenitore delle colonne: fa in modo che le colonne si impilino verticalmente */
-.tabella-orari {
-  flex-direction: column; 
-  align-items: center; /* Centra le colonne all'interno di tabella-orari */
-}
 
-    /* ✨ Stili delle singole colonne: per schermi piccoli occupano la quasi totalità della larghezza */
-.colonna {
-  width: 90%; /* Occupa quasi tutta la larghezza dello schermo mobile */
-  margin-bottom: 20px; /* Aggiunge spazio sotto ogni colonna per separarle */
-  padding: 15px 0; /* Aggiunge un po' di padding interno */
-}
-
-    /* ✨ Intestazioni delle colonne: riduciamo la dimensione per adattarla meglio */
-.colonna h3 {
-  font-size: 20px;
-}
-
-    /* ✨ Testo orari: miglioriamo la leggibilità */
-.colonna li {
-  font-size: 1.1rem;
-}
-    
-    /* ✨ Titolo principale: riduciamo la dimensione e il margine per maggiore compattezza */
-.orari-lezioni h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
 
 /*----------------------------------------------------------------MEDIAQUERY*/
 
